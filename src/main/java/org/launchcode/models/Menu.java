@@ -26,6 +26,14 @@ public class Menu {
     @ManyToMany
     private List<Cheese> cheeses;
 
+    public void addItem(Cheese item) {
+        cheeses.add(item);
+    }
+
+    public Menu() {}
+
+    public Menu(String name) { this.name = name; }
+
     public int getId() { return id; }
 
     public void setId(int id) { this.id = id; }
